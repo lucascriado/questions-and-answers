@@ -1,3 +1,7 @@
 const http = require('http')
 
-http.createServer().listen(8787);
+http.createServer(function(x,y){
+    y.end('olá mundo!')
+}).listen(8787);
+
+console.log('Seu servidor está rodando!')
