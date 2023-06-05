@@ -8,6 +8,7 @@ app.get("/", function(req, res){
 app.get("/send/:randomvalue", function (req, res){
     let server = req.params.randomvalue
     console.log(server)
+    /* http://127.0.0.1:3333/send/qualquercoiisa */
 })
 
 app.get("/send/", function(req, res){
