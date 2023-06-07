@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
 
 app.get("/", function(req, res) {
+  var name = 'Lucas'
+  var lang = 'JavaScript'
   res.render('index');
 });
 
-// Agora você pode referenciar a variável x aqui ou em qualquer outro lugar fora da função de callback
 
 app.listen(9090);
 
