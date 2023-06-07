@@ -3,10 +3,13 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.get("/", function(req, res) {
-  var name = 'Lucas'
-  var lang = 'JavaScript'
-  res.render('index');
+app.get("/:teste1/:teste2", function(req, res) {
+  let server1 = req.params.teste1
+  let server2 = req.params.teste2
+  res.render('index', {
+    name: server1,
+    lang: server2
+  });
 });
 
 
