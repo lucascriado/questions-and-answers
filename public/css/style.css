@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 40px auto 0;
+    align-items: center;
+    background: rgb(27,21,125);
+    background: linear-gradient(90deg, rgba(27,21,125,1) 0%, rgba(5,4,18,1) 42%, rgba(19,19,48,1) 60%, rgba(118,144,226,1) 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 40px;
+}
+
+img {
+    width: 550px;
+    height: 550px;
+}
