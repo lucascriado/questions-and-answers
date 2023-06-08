@@ -9,7 +9,12 @@
 <body>
     <h1>Welcome to page!</h1>
     <p>Welcome to page!</p>
-    <p> Primeira frase : <%= name %><br><hr> Segunda Frase : <%= lang %></p> 
-     
+    <p>Segunda Frase : <%= lang %></p> 
+    
+    <% if(lang == "github"){  %>
+        <h3>Você digitou o esperado!</h3>
+    <% } else { %>
+        <h3>você digitou uma abreviação!</h3>
+    <% } %>
 </body>
 </html>
