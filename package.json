@@ -9,10 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "clear-module": "^4.1.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "fs": "^0.0.1-security"
   }
 }
