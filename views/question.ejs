@@ -7,62 +7,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/polygon.ico" type="image/x-icon">
-    <title>Forms | Lucas Criado</title>
+    <title>Forms</title>
     <link rel="stylesheet" href="/css/question.css">
 
 <body>
-    <header>
-        <img class="img-logo" src="/images/img-polygon.png" alt="logo">
-        <span>Forms</span>
-        <p>| &nbsp&nbsp desenvolvido por Lucas Criado.</p>
-    </header>
+    <div class="container">
+        <header>
+            <img class="img-logo" src="/images/img-polygon.png" alt="logo">
+            <span>Forms</span>
+            <p>| &nbsp&nbsp desenvolvido por Lucas Criado.</p>
+        </header>
 
 
-    <main>
-        <div class="elm-card">
-            <p class="elm-card-subtitle-1">Formulário e Postagens </p>
-            <p class="elm-card-subtitle-2">para perguntas e respostas. </p>
-            <p class="elm-card-subtitle-3">Desenvolvimento</p>
-            <p class="elm-card-subtitle-4">Node.js e MySQL</p>
-            <div class="elm-card-img">
-                <img class="elm-card-node" src="/images/nodejs.svg" alt="nodejs">
-                <img class="elm-card-line" src="/images/line.svg" alt="line">
-                <img class="elm-card-sql" src="/images/sql.svg" alt="sql">
+        <main>
+            <div class="elm-card">
+                <p class="elm-card-subtitle-1">Formulário e Postagens </p>
+                <p class="elm-card-subtitle-2">para perguntas e respostas. </p>
+                <p class="elm-card-subtitle-3">Desenvolvimento</p>
+                <p class="elm-card-subtitle-4">Node.js e MySQL</p>
+                <div class="elm-card-img">
+                    <img class="elm-card-node" src="/images/nodejs.svg" alt="nodejs">
+                    <img class="elm-card-line" src="/images/line.svg" alt="line">
+                    <img class="elm-card-sql" src="/images/sql.svg" alt="sql">
+                </div>
             </div>
-        </div>
-        <div>
-            <form>
-                <div class="elm-form-head">
-                    <div class="elm-form-head-1">
-                        <label for="">Nome</label>
-                        <input class="elm-form-head-1-input" placeholder="nome aleatório" type="text">
+            <div>
+                <form>
+                    <div class="elm-form-head">
+                        <div class="elm-form-head-1">
+                            <label for="">Nome</label>
+                            <input class="elm-form-head-1-input" placeholder="nome aleatório" type="text">
+                        </div>
+                        <div class="elm-form-head-2">
+                            <label for="">Sobrenome</label>
+                            <input class="elm-form-head-2-input" placeholder="sobrenome aleatório" type="text">
+                        </div>
                     </div>
-                    <div class="elm-form-head-2">
-                        <label for="">Sobrenome</label>
-                        <input class="elm-form-head-2-input" placeholder="sobrenome aleatório" type="text">
+                    <label class="elm-form-email-label" for="">Email</label>
+                    <input class="elm-form-email-input" placeholder="email.com" type="text">
+                    <label class="elm-form-answer-label" for="">Pergunta</label>
+                    <textarea class="elm-form-answer-input" placeholder="conte como podemos te ajudar!" name="" id=""
+                        rows="2"></textarea>
+                    <div class="elm-form-terms">
+                        <input type="checkbox" name="" id="">
+                        <p>isso é uma aplicação em desenvolvimento, os dados podem ser fictícios,<br>
+                            defendemos a privacidade seus dados não serão compartilhados.</p>
                     </div>
-                </div>
-                <label class="elm-form-email-label" for="">Email</label>
-                <input class="elm-form-email-input" placeholder="teste@email.com" type="text">
-                <label class="elm-form-answer-label" for="">Pergunta</label>
-                <input class="elm-form-answer-input" placeholder="conte como podemos te ajudar!" type="text">
-                <div class="elm-form-terms">
-                    <input type="checkbox" name="" id="">
-                    <p>isso é uma aplicação em desenvolvimento, os dados podem ser fictícios,<br>
-                        defendemos a privacidade seus dados não serão compartilhados.</p>
-                </div>
-                <button>Compartilhe sua pergunta.</button>
-            </form>
-        </div>
-    </main>
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js"></script>
+                    <button>Compartilhe sua pergunta.</button>
+                </form>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+            integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+            crossorigin="anonymous"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </div>
 </body>
 
 </html>

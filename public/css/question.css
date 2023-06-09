@@ -17,11 +17,18 @@
 }   
 
 body {
+    display: flex;
+    align-items: center;
     background-color: #0A0A0A;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
     color: white;
     width: 108.0rem;
+    height: 56.4rem;
     box-sizing: border-box;
-    margin: 15rem auto;
 }
 
 header {
@@ -218,6 +225,8 @@ input, textarea {
     line-height: 3.2rem;
     /* identical to box height, or 200% */
     color: #E8E8E8;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
 }
 
 .elm-form-email-input {
@@ -244,14 +253,44 @@ input, textarea {
     line-height: 3.2rem;
     /* identical to box height, or 200% */
     color: #E8E8E8;
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
 }
 
 .elm-form-answer-input {
     display: block;
+    border: 2px solid #BEBEBE;
+    border-radius: 7px;
+    width: 63.8rem;
+    padding: 0.4rem 0rem 0.4rem 1.6rem;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+    color: #BEBEBE;
+    height: 9.5rem;
 }
 
 .elm-form-terms {
     display: flex;
+}
+
+.elm-form-terms input {
+    display: block;
+    border: 2px solid #BEBEBE;
+    width: 3.2rem;
+    height: 4.3rem;
+    border-radius: 7px;
+    padding: 0.4rem 0rem 0.4rem 1.6rem;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+    color: #BEBEBE;
 }
 
 form {
