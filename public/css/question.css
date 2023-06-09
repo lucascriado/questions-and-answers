@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #18181b;
+}
+
+.text-big-size {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: #f4f4f5;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 500px;
+}
+
+.text-min-size {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(244, 244, 245);
+}
+
+.input-min-size {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.9px;
+    color: rgba(244, 244, 245, 0.507);
+}
+
+.btn-style {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(244, 244, 245);
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: none;
+    text-align: center;
+    background-color: #372956;
+    border: 1px solid #664ac6;
+    width: 400px;
+}
+
+img {
+    height: 350px;
+    width: 350px;
+}
+
+input[type="text"] {
+    border: 1px solid #664ac6;
+    background-color : #37295657;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(244, 244, 245);
+    width: 400px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    border: none;
+}

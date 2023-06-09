@@ -14,5 +14,9 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
+app.get("/perguntar", function(req, res){
+  res.render("question")
+})
+
 app.listen(9090);
 
