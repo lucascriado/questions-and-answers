@@ -48,7 +48,6 @@ body {
     text-align: center;
     background-color: #372956;
     border: 1px solid #664ac6;
-    width: 400px;
 }
 
 img {
@@ -63,7 +62,6 @@ input[type="text"] {
     font-size: 14px;
     font-weight: 200;
     color: rgb(244, 244, 245);
-    width: 400px;
 }
 
 input:focus, textarea:focus, select:focus{
