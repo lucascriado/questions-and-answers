@@ -1,70 +1,149 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 62.5%;
+}
+
+/* font-family: 'Open Sans', sans-serif; */
+
+@font-face {
+    font-family: "Eina";
+    src: local(Eina), url(../css/fonts/Eina03-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Biotif";
+    src: local(Biotif), url(../css/fonts/Fontspring-DEMO-biotif-semibold.ttf);
 }
 
 body {
-    background-color: #18181b;
+    background-color: #0A0A0A;
+    color: white;
 }
 
-.text-big-size {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 44px;
-    color: #f4f4f5;
-}
-
-.container-center {
+header {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 500px;
+    gap: 1.2rem;
+    margin-top: 2.8rem;
+    margin-left: 5.2rem;
+    margin-bottom: 2.5rem;
 }
 
-.text-min-size {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+header span {
+    font-family: 'Eina';
+    font-style: normal;
     font-weight: 400;
-    color: rgb(244, 244, 245);
+    font-size: 2.0rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 160% */
+
+
+    color: #FFFFFF;
 }
 
-.input-min-size {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.9px;
-    color: rgba(244, 244, 245, 0.507);
+.img-logo {
+    width: 3.1rem;
+    height: 3.1rem;
 }
 
-.btn-style {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    color: rgb(244, 244, 245);
-    padding: 5px 0;
-    border-radius: 5px;
-    box-shadow: none;
-    text-align: center;
-    background-color: #372956;
-    border: 1px solid #664ac6;
+header p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+
+
+    color: #BEBEBE;
 }
 
-img {
-    height: 350px;
-    width: 350px;
+main {
+    display: flex;
 }
 
-input[type="text"] {
-    border: 1px solid #664ac6;
-    background-color : #37295657;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 200;
-    color: rgb(244, 244, 245);
+.elm-card {
+    background: url(/images/card.png) no-repeat;
+    width: 31.2rem;
+    height: 43.5rem;
+    border-radius: 10px;
+    background-size: 31.2rem 43.5rem ;
+    margin-left: 5.2rem;
 }
 
-input:focus, textarea:focus, select:focus{
-    outline: none;
-    border: none;
+.elm-card-subtitle-1 {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.2rem;
+    /* or 160% */
+    margin-left: 1.6rem;
+    margin-top: 2.2rem;
+    color: #FFFFFF;
 }
+
+.elm-card-subtitle-2 {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    /* or 160% */
+    margin-left: 1.6rem;
+    color: #EAEAEA;
+}
+
+.elm-card-subtitle-3 {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.2rem;
+    margin-left: 1.6rem;
+    margin-top: 6.1rem;
+    /* or 160% */
+    color: #FFFFFF;
+}
+
+.elm-card-subtitle-4 {
+    font-family: 'Eina';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+    /* or 213% */
+    margin-left: 1.6rem;
+    margin-top: 0.3rem;
+    color: #EAEAEA;
+}
+
+.elm-card-img {
+    align-items: center;
+    display: flex;
+    margin-top: 0.8rem;
+}
+
+.elm-card-node {
+    width: 2.4rem;
+    height: 2.596rem;
+    margin-left: 1.6rem;
+}
+
+.elm-card-line {
+    width: 1.6rem;
+    height: 0rem;
+    border: 1px solid #EAEAEA;
+    transform: rotate(90deg);
+    margin-left: 1.4rem;
+}
+
+.elm-card-sql {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-left: 1.5rem;
+}
+
+
+
+
