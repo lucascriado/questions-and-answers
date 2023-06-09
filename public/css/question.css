@@ -14,11 +14,14 @@
 @font-face {
     font-family: "Biotif";
     src: local(Biotif), url(../css/fonts/Fontspring-DEMO-biotif-semibold.ttf);
-}
+}   
 
 body {
     background-color: #0A0A0A;
     color: white;
+    width: 108.0rem;
+    box-sizing: border-box;
+    margin: 15rem auto;
 }
 
 header {
@@ -143,6 +146,119 @@ main {
     height: 2.6rem;
     margin-left: 1.5rem;
 }
+
+.elm-form-head {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.elm-form-head-1 label {
+    display: block;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 200% */
+    color: #E8E8E8;
+}
+
+input, textarea {
+    all: unset;
+}
+
+.elm-form-head-1-input {
+    border: 2px solid #BEBEBE;
+    border-radius: 7px;
+    width: 29.7rem;
+    padding: 0.4rem 0rem 0.4rem 1.6rem;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+    color: #BEBEBE;
+    margin-top: 0.6rem;
+}
+
+.elm-form-head-2 label {
+    display: block;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 200% */
+    color: #E8E8E8;
+}
+
+.elm-form-head-2-input {
+    border: 2px solid #BEBEBE;
+    border-radius: 7px;
+    width: 29.7rem;
+    padding: 0.4rem 0rem 0.4rem 1.6rem;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+    color: #BEBEBE;
+    margin-top: 0.6rem;
+}
+
+.elm-form-email-label {
+    display: block;
+    display: block;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 200% */
+    color: #E8E8E8;
+}
+
+.elm-form-email-input {
+    border: 2px solid #BEBEBE;
+    border-radius: 7px;
+    width: 63.8rem;
+    padding: 0.4rem 0rem 0.4rem 1.6rem;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+    color: #BEBEBE;
+}
+
+.elm-form-answer-label {
+    display: block;
+    display: block;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 200% */
+    color: #E8E8E8;
+}
+
+.elm-form-answer-input {
+    display: block;
+}
+
+.elm-form-terms {
+    display: flex;
+}
+
+form {
+    margin-left: 4.6rem;
+    width: 61.8rem;
+}
+
 
 
 
