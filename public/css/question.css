@@ -343,24 +343,29 @@ form {
     header {
         margin: 0  auto;
         margin-top: 2.7rem;
-        margin-bottom: 2.3rem;
+        margin-bottom: 2.7rem;
     }
 
     .elm-card {
         background: url(/images/card.png) no-repeat;
         background-size: cover;
         width: 34.6rem;
-        height: 12.5rem;
+        height: 13.5rem;
         border-radius: 1rem;
-        margin: 0 0 14rem;
+        margin: 0 0 11.7rem;
     }
 
     .elm-form-head {
         display: flex;
         flex-direction: column;
         margin-top: 1.6rem;
+        
     }
     
+    .elm-form-terms {
+        margin: 0;
+        margin-top: 1.6rem;
+    } 
 
     .elm-form-terms p {
         margin: 0;
@@ -377,7 +382,8 @@ form {
 
     .elm-form-btn {
         width: 31.7rem;
-        margin-bottom: 1.6rem;
+        margin-top: 1.6rem;
+        margin-bottom: 2.7rem;
     }
 
     body {
@@ -418,6 +424,14 @@ form {
     
     .elm-form-terms {
         width: 31.6rem;
+    }
+
+    .elm-card-subtitle-1 {
+        text-align: center;
+    }
+
+    .elm-card-subtitle-2 {
+        text-align: center;
     }
 
     .elm-card-subtitle-3 {
