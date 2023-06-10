@@ -341,22 +341,26 @@ form {
     }
 
     header {
-       
+        margin: 0  auto;
+        margin-top: 2.7rem;
+        margin-bottom: 2.3rem;
     }
 
     .elm-card {
-        margin: 0;
-        
+        background: url(/images/card.png) no-repeat;
+        background-size: cover;
+        width: 31.2rem;
+        height: 10.5rem;
+        border-radius: 3rem;
+        margin: auto 0 15rem;
     }
 
     .elm-form-head {
         display: flex;
         flex-direction: column;
+        margin-top: 1.6rem;
     }
     
-    .container {
-        margin: 0 auto;
-    }
 
     .elm-form-terms p {
         margin: 0;
@@ -377,14 +381,16 @@ form {
 
     body {
         display: flex;
+        align-items: normal;
         background-color: #0A0A0A;
-        height: 100vh;
+        justify-content: center;
+        height: 87.0rem;
     }
     
     .container {
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
