@@ -274,7 +274,7 @@ input, textarea {
 
 .elm-form-terms {
     display: flex;
-    margin-top: 0.7rem;
+    margin-top: 1.7rem;
     gap: 2.0rem;
     align-items: center;
 }
@@ -296,14 +296,15 @@ input, textarea {
 }
 
 .elm-form-terms p {
-    font-family: 'Biotif';
+    font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 400;
+    font-size: 1.1rem;
     line-height: 3.2rem;
     width: 63.8rem;
     /* identical to box height, or 200% */
     color: #E8E8E8;
+    
 }
 
 button {
@@ -311,10 +312,12 @@ button {
 }
 
 .elm-form-btn {
-    margin-top: 2.5rem;
-    width: 63.8rem;
+    margin-top: 1.6rem;
+    width: 65.8rem;
     height: 3.7rem;
-    background: url(../images/Rectangle.svg) no-repeat;
+    background: url(../images/rectangle5.svg) no-repeat;
+    border: 1px solid #FFF;
+    border-radius: 7px;
     background-size: cover;
     border-radius: 7px;
     font-family: 'Biotif';
@@ -332,6 +335,84 @@ form {
     width: 61.8rem;
 }
 
+@media (max-width: 1100px) {
+    * {
+      transition: 1s;
+    }
+
+    header {
+       
+    }
+
+    .elm-card {
+        margin: 0;
+        
+    }
+
+    .elm-form-head {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container {
+        margin: 0 auto;
+    }
+
+    .elm-form-terms p {
+        margin: 0;
+        width: 29.7rem;
+    }   
+
+    .elm-form-answer-input {
+        width: 29.7rem;
+    }
+
+    .elm-form-email-input {
+        width: 29.7rem;
+    }
+
+    .elm-form-btn {
+        width: 31.7rem;
+    }
+
+    body {
+        display: flex;
+        background-color: #0A0A0A;
+        height: 100vh;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        margin: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .elm-form-email-label {
+        width: 31.6rem;
+    }
+
+    .elm-form-answer-label {
+        width: 31.6rem;
+    }
+    
+    .elm-form-terms {
+        width: 31.6rem;
+    }
+}
 
 
 
