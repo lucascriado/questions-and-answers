@@ -349,10 +349,10 @@ form {
     .elm-card {
         background: url(/images/card.png) no-repeat;
         background-size: cover;
-        width: 31.2rem;
-        height: 10.5rem;
-        border-radius: 3rem;
-        margin: auto 0 15rem;
+        width: 34.6rem;
+        height: 12.5rem;
+        border-radius: 1rem;
+        margin: 0 0 14rem;
     }
 
     .elm-form-head {
@@ -377,6 +377,7 @@ form {
 
     .elm-form-btn {
         width: 31.7rem;
+        margin-bottom: 1.6rem;
     }
 
     body {
@@ -417,6 +418,16 @@ form {
     
     .elm-form-terms {
         width: 31.6rem;
+    }
+
+    .elm-card-subtitle-3 {
+        text-align: start;
+
+    }
+
+    .elm-card-subtitle-4 {
+        text-align: start;
+
     }
 }
 
