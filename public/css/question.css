@@ -245,7 +245,6 @@ input, textarea {
 
 .elm-form-answer-label {
     display: block;
-    display: block;
     font-family: 'Biotif';
     font-style: normal;
     font-weight: 600;
@@ -275,13 +274,16 @@ input, textarea {
 
 .elm-form-terms {
     display: flex;
+    margin-top: 0.7rem;
+    gap: 2.0rem;
+    align-items: center;
 }
 
 .elm-form-terms input {
     display: block;
     border: 2px solid #BEBEBE;
-    width: 3.2rem;
-    height: 4.3rem;
+    width: 0.75rem;
+    height: 1.5rem;
     border-radius: 7px;
     padding: 0.4rem 0rem 0.4rem 1.6rem;
     font-family: 'Biotif';
@@ -293,10 +295,43 @@ input, textarea {
     color: #BEBEBE;
 }
 
+.elm-form-terms p {
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 3.2rem;
+    width: 63.8rem;
+    /* identical to box height, or 200% */
+    color: #E8E8E8;
+}
+
+button {
+    border: none;
+}
+
+.elm-form-btn {
+    margin-top: 2.5rem;
+    width: 63.8rem;
+    height: 3.7rem;
+    background: url(../images/Rectangle.svg) no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+    font-family: 'Biotif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    /* identical to box height, or 267% */
+    text-align: center;
+    color: #F3F3F3;
+}
+
 form {
     margin-left: 4.6rem;
     width: 61.8rem;
 }
+
 
 
 
