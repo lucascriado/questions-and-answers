@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const connect = require('./database')
 
-const createTable = connect.define('teste', {
+const createTable = connect.define('teste12', {
     name: {
         type: Sequelize.STRING,
         allowNull: false
