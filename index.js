@@ -23,27 +23,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.post("/save", function (req, res) {
-  var reqName = req.body.name;
-  var reqEmail = req.body.email;
-  if (reqName && reqEmail) {
-    answer.create({
-      name: reqName,
-      email: reqEmail
-    })
-    res.redirect("/");
-  } else {
-    console.log('alguma coisa deu errado')
-  }
-})
 
-app.get("/", function (req, res) {
-  answer.findAll({ raw: true }).then(prm => {
-    res.render("list", {
-      table : prm
-    })
-  })
-})
 
 app.get("/question", function (req, res) {
   res.render("question")
