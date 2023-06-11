@@ -12,6 +12,6 @@ const createTable = connect.define('teste', {
     }
 });
 
-createTable.sync({force: false}).then(() => {
-    console.log('olha a tabelinha pronta eim')
-})
+createTable.sync({force: false})
+
+module.exports = createTable;

@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
 const connect = require('./database/database')
+const answer = require('./database/table')
 
 connect
   .authenticate()
@@ -30,7 +31,17 @@ app.post("/salvar", function (req, res) {
   res.send("formulário recebido!")
   var reqNome = req.body.nome;
   var reqEmail = req.body.email;
-  console.log(reqEmail + reqNome)
+
+  if (reqNome && reqEmail) {
+    answer.create({
+      name: reqNome,
+      email: reqEmail
+    })
+    res.redirect("/perguntar");
+  } else {
+    console.log('alguma coisa deu errado')
+  }
+
 })
 
 app.listen(9090);
