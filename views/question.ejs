@@ -13,43 +13,7 @@
 <body>
     <div class="container">
         <%- include ('partials/header.ejs') %>
-        <main>
-            <div class="elm-card">
-                <p class="elm-card-subtitle-1">Formulário e Postagens </p>
-                <p class="elm-card-subtitle-2">para perguntas e respostas. </p>
-                <p class="elm-card-subtitle-3">Desenvolvimento</p>
-                <p class="elm-card-subtitle-4">Node.js e MySQL</p>
-                <div class="elm-card-img">
-                    <img class="elm-card-node" src="/images/nodejs.svg" alt="nodejs">
-                    <img class="elm-card-line" src="/images/line.svg" alt="line">
-                    <img class="elm-card-sql" src="/images/sql.svg" alt="sql">
-                </div>
-            </div>
-            <div>
-                <form method="POST" action="/save">
-                    <div class="elm-form-head">
-                        <div class="elm-form-head-1">
-                            <label for="">Nome</label>
-                            <input class="elm-form-head-1-input" placeholder="nome aleatório" name="name" type="text">
-                        </div>
-                        <div class="elm-form-head-2">
-                            <label for="">Sobrenome</label>
-                            <input class="elm-form-head-2-input" placeholder="sobrenome aleatório" type="text">
-                        </div>
-                    </div>
-                    <label class="elm-form-email-label" for="" >Email</label>
-                    <input class="elm-form-email-input" placeholder="email.com" name="email" type="text">
-                    <label class="elm-form-answer-label" for="">Pergunta</label>
-                    <textarea class="elm-form-answer-input" placeholder="conte como podemos te ajudar." name="" id=""
-                        rows="2"></textarea>
-                    <div class="elm-form-terms">
-                        <input type="checkbox" name="" id="">
-                        <p> (Termos) em desenvolvimento, defendemos sua privacidade, os dados não serão compartilhados.</p>
-                    </div>
-                    <button type="submit" class="elm-form-btn">Compartilhe sua pergunta.</button>
-                </form>
-            </div>
-        </main>
+        <h1>hello world</h1>
         <%- include ('partials/footer.ejs') %>
     </div>
 </body>
