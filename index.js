@@ -1,7 +1,7 @@
 /* modulos/bibliotecas instalados */
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser')
+const bodyparser = require('body-parser')
 const connect = require('./database/database')
 const answer = require('./database/table')
 
@@ -20,16 +20,16 @@ app.set('view engine', 'ejs');
 /* usando os arquivos estaticos */
 app.use(express.static('public'));
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyparser.urlencoded({ extended: false }))
+app.use(bodyparser.json())
 
 app.post("/save", function (req, res) {
-  var reqName = req.body.name;
-  var reqEmail = req.body.email;
-  if (reqName && reqEmail) {
+  var reqname = req.body.name;
+  var reqtext = req.body.text;
+  if (reqname && reqtext) {
     answer.create({
-      name: reqName,
-      email: reqEmail
+      name: reqname,
+      email: reqtext
     })
     res.redirect("/");
   } else {
@@ -39,14 +39,14 @@ app.post("/save", function (req, res) {
 
 app.get("/", function (req, res) {
   answer.findAll({ raw: true }).then(prm => {
-    res.render("list", {
-      table : prm
+    res.render("index", {
+      table: table
     })
   })
 })
 
-app.get("/question", function (req, res) {
-  res.render("question")
+app.get("/user", function (req, res) {
+  res.render("user")
 })
 
 app.listen(9090);
