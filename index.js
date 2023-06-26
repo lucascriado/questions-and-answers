@@ -40,7 +40,7 @@ app.post("/save", function (req, res) {
 app.get("/", function (req, res) {
   answer.findAll({ raw: true }).then(prm => {
     res.render("index", {
-      table: table
+      table: prm
     })
   })
 })
