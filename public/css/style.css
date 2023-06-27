@@ -7,9 +7,24 @@
 body {
     font-family: 'Manrope', sans-serif;
     width: 100%;
+    background-color: black;
+    color: white;
 }
 
 .container {
     width: 90.0rem;
     margin: 0 auto;
+}
+
+.container ul {
+    display: flex;
+}
+
+.container ul li {
+    list-style-type: none;
+}
+
+.container-sub-primary {
+    display: flex;
+    flex-direction: column;
 }
