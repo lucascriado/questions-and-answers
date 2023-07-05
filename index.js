@@ -45,8 +45,8 @@ app.get("/", function (req, res) {
   })
 })
 
-app.get("/user", function (req, res) {
-  res.render("user")
+app.get("/register", function (req, res) {
+  res.render("register")
 })
 
 app.listen(9090);

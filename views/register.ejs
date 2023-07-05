@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': { 'min': '0', 'max': '1100' },
+                    // => @media (min-width: 640px and max-width: 767px) { ... }
+
+                    'md': { 'min': '768px', 'max': '1023px' },
+                    // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+                    'lg': { 'min': '1024px', 'max': '1279px' },
+                    // => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+                    'xl': { 'min': '1280px', 'max': '1535px' },
+                    // => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+                    '2xl': { 'min': '1536px' },
+                    // => @media (min-width: 1536px) { ... }
+                },
+                extend: {
+                    fontFamily: {
+                        jarkata: ['Plus Jakarta Sans'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <a href="">Community</a>
+    <img src="" alt="">
+    <h1 class="font-jarkata">Track your mood and reflect on your day</h1>
+    <p>Get an overview of how you are performing and motivate yourself to achieve even moew.</p>
+    <img src="" alt="">
+    <label for="">Name</label>
+    <input type="text" placeholder="Get an overview.">    
+    <label for="">Question</label>
+    <input type="text" placeholder="To achieve even moew.">
+    <div></div>
+    <button>Arrow</button>
+</body>
+
+</body>
+
+</html>
+
+<!-- 
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/footer.ejs') %> -->
