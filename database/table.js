@@ -1,12 +1,12 @@
 const Sequelize = require('sequelize')
 const connect = require('./database')
 
-const createTable = connect.define('teste12', {
+const createTable = connect.define('question', {
     name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    email: {
+    question: {
         type: Sequelize.STRING,
         allowNull: false
     }

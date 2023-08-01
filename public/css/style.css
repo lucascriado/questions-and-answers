@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #FFFFFF;
+    width: 35.7rem;
+    margin: 0 auto;
+}
+
+header {
+    margin: 3rem 0rem 3rem;
+
+}
+
+header p {
+    text-align: end;
+    color: #5B2EAA;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 3rem;
+}
+
+header h2 {
+    color: #000;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+header h2 span {
+    text-align: center;
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.header-subtitle {
+    text-align: center;
+    color: #313131;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.header-subtitle span {
+    color: #313131;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+    margin: 0 auto; 
+}   
+
+main img {
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+main h1 {
+    color: #000;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+main p {
+    color: #313131;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+main p span {
+    color: #313131;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+

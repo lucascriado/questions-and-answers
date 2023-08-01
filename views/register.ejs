@@ -1,59 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Q/A</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                screens: {
-                    'sm': { 'min': '0', 'max': '1100' },
-                    // => @media (min-width: 640px and max-width: 767px) { ... }
-
-                    'md': { 'min': '768px', 'max': '1023px' },
-                    // => @media (min-width: 768px and max-width: 1023px) { ... }
-
-                    'lg': { 'min': '1024px', 'max': '1279px' },
-                    // => @media (min-width: 1024px and max-width: 1279px) { ... }
-
-                    'xl': { 'min': '1280px', 'max': '1535px' },
-                    // => @media (min-width: 1280px and max-width: 1535px) { ... }
-
-                    '2xl': { 'min': '1536px' },
-                    // => @media (min-width: 1536px) { ... }
-                },
-                extend: {
-                    fontFamily: {
-                        jarkata: ['Plus Jakarta Sans'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <a href="">Community</a>
-    <img src="" alt="">
-    <h1 class="font-jarkata">Track your mood and reflect on your day</h1>
-    <p>Get an overview of how you are performing and motivate yourself to achieve even moew.</p>
-    <img src="" alt="">
-    <label for="">Name</label>
-    <input type="text" placeholder="Get an overview.">    
-    <label for="">Question</label>
-    <input type="text" placeholder="To achieve even moew.">
-    <div></div>
-    <button>Arrow</button>
+    <header>
+        <p> / Comunidade</p>
+        <h2>Desenvolvido por <span>Lucas Criado</span></h2>
+        <p class="header-subtitle">github.com/<span>lucascriado</span></p>
+    </header>
+    <main>
+        <img src="images/-.png" alt="">
+        <h1>Olá, seja bem-vindo(a)!</h1>
+        <p>Está é uma aplicação desenvolvida em <span>Node.js, mySQL.</span></p>
+        <label for="">Nome</label>
+        <input type="text" placeholder="Como podemos te chamar?">
+        <label for="">Pergunta</label>
+        <textarea name="" id="" cols="30" rows="10" placeholder="O que está com dúvida hoje?"></textarea>
+        <button>Compartilhe!</button>
+    </main>
+    <footer></footer>
 </body>
-
-</body>
-
 </html>
 
 <!-- 
