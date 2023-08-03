@@ -187,11 +187,62 @@ main button {
     margin-bottom: 3rem;
 }
 
+.head {
+    display: none;
+}
+
 @media (min-width: 768px) {
+    header h2, .header-subtitle {
+        display: none;
+    }
     body {
         background-color: #FFFFFF;
         width: 136.5rem;
         margin: 0 auto;
+    }
+    .head {
+        display: flex;
+        justify-content: space-between;
+    }
+    .head-group-subtitle1 {
+        color: #000;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .head-group-subtitle2 {
+        color: #000;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .head-group-subtitle3 {
+        color: #313131;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .head-group-subtitle4 {
+        color: #313131;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    header p {
+        color: #5B2EAA;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
     }
 }
 
