@@ -163,6 +163,11 @@ textarea {
     resize: none
 }
 
+.forms {
+    display: flex;
+    flex-direction: column;
+}
+
 #name {
     margin-bottom: 3rem;
 }
@@ -187,13 +192,18 @@ main button {
     margin-bottom: 3rem;
 }
 
-.head {
-    display: none;
+@media (max-width: 768px) {
+    .head, #img-pc {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
-    header h2, .header-subtitle {
+    header h2, .header-subtitle, #img-mb {
         display: none;
+    }
+    header {
+        margin: 4.8rem 0 16rem;  
     }
     body {
         background-color: #FFFFFF;
@@ -245,11 +255,96 @@ main button {
         line-height: normal;
     }
     main {
+        gap: 6rem;
         flex-direction: row;
     }
     .forms {
         display: flex;
         flex-direction: column;
+    }
+    #img-pc {
+        width: 42rem;
+        height: 42rem;
+    }
+    .container {
+        width: 38rem;
+    }
+    .container h1 {
+        width: 33.8rem;
+        color: #000;
+        font-family: Plus Jakarta Sans;
+        font-size: 29px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .container p {
+        width: 38.9rem;
+        color: #313131;
+        font-family: Plus Jakarta Sans;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .container p span {
+        color: #313131;
+        font-family: Plus Jakarta Sans;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .forms label {
+        color: #131313;
+        font-family: Plus Jakarta Sans;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    input[type=text]{
+        color: #606060;
+        width: 386px;
+        height: 44px;
+        font-family: Plus Jakarta Sans;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 6px;
+        border: 0.8px solid #2E2E2E;
+        background: rgba(217, 217, 217, 0.00);
+    }
+
+    textarea {
+        width: 386px;
+        height: 74px;
+        border-radius: 6px;
+        border: 0.8px solid #2E2E2E;
+        background: rgba(217, 217, 217, 0.00);
+        color: #606060;
+        font-family: Plus Jakarta Sans;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    main button {
+        cursor: pointer;
+        color: #5B2EAA;
+        text-align: center;
+        font-family: Plus Jakarta Sans;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 6px;
+        border: 1px solid #5B2EAA;
+        background: #D5C4F2;
+        width: 386px;
+        height: 40px;
     }
 }
 
