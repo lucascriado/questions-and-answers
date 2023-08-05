@@ -244,5 +244,12 @@ main button {
         font-weight: 600;
         line-height: normal;
     }
+    main {
+        flex-direction: row;
+    }
+    .forms {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
