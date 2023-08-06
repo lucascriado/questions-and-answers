@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    margin: 9rem 0rem 3rem;
+    margin: 4rem 0rem 3rem;
 }
 
 header p {
@@ -24,7 +24,7 @@ header p {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     margin-right: 1rem;
 }
 
@@ -70,6 +70,21 @@ header h2 span {
     font-weight: 600;
     line-height: normal;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+    margin: 0 auto; 
+    align-items: center;
+}   
+
+@media (max-width: 768px) {
+    #img-pc, .head-group {
+        display: none;
+    }
+}
+
 
 @media (min-width: 768px) {
     header h2, .header-subtitle, #img-mb {
@@ -126,5 +141,10 @@ header h2 span {
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+    }
+    main {
+        gap: 6rem;
+        flex-direction: row;
+        align-items: center;
     }
 }

@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    margin: 9rem 0rem 3rem;
+    margin: 4rem 0rem 3rem;
 }
 
 header p {
@@ -24,7 +24,7 @@ header p {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     margin-right: 1rem;
 }
 
@@ -103,7 +103,7 @@ main p {
     color: #313131;
     margin-bottom: 3.0rem;
     font-family: Plus Jakarta Sans;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -113,7 +113,7 @@ main p span {
     -webkit-font-smoothing: antialiased;
     color: #313131;
     font-family: Plus Jakarta Sans;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -193,7 +193,7 @@ main button {
 }
 
 @media (max-width: 768px) {
-    .head, #img-pc {
+    #img-pc, .head-group {
         display: none;
     }
 }
@@ -283,7 +283,7 @@ main button {
         width: 38.9rem;
         color: #313131;
         font-family: Plus Jakarta Sans;
-        font-size: 23px;
+        font-size: 21px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -291,7 +291,7 @@ main button {
     .container p span {
         color: #313131;
         font-family: Plus Jakarta Sans;
-        font-size: 23px;
+        font-size: 21px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
