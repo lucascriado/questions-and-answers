@@ -257,7 +257,7 @@ main button {
     main {
         gap: 6rem;
         flex-direction: row;
-        align-items: start;
+        align-items: center;
     }
     .forms {
         display: flex;
