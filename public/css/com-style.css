@@ -212,13 +212,13 @@ main button {
 }
 
 @media (max-width: 768px) {
-    #img-pc, .head-group {
+    #img-pc, .head-group, .show-pc {
         display: none;
     }
 }
 
 @media (min-width: 768px) {
-    header h2, .header-subtitle, #img-mb {
+    header h2, .header-subtitle, #img-mb, .show-pc {
         display: none;
     }
     header {
@@ -367,4 +367,5 @@ main button {
         height: 40px;
     }
 }
+
 
