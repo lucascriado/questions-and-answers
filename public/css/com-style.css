@@ -218,7 +218,7 @@ main button {
 }
 
 @media (min-width: 768px) {
-    header h2, .header-subtitle, #img-mb, .show-pc {
+    header h2, .header-subtitle, #img-mb {
         display: none;
     }
     header {
@@ -232,6 +232,8 @@ main button {
     .head {
         display: flex;
         justify-content: space-between;
+        width: 76rem;
+        margin: 0 auto;
     }
     .head-group-subtitle1 {
         color: #000;
