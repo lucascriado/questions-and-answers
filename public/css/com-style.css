@@ -32,7 +32,7 @@ header h2 {
     text-align: center;
     color: #000;
     font-family: Plus Jakarta Sans;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -41,7 +41,7 @@ header h2 {
 .header-QA {
     color: #5B2EAA;
     font-family: Plus Jakarta Sans;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -50,7 +50,7 @@ header h2 {
 .header-span {
     color: #D5C4F2;
     font-family: Plus Jakarta Sans;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -154,30 +154,66 @@ main label {
 input[type=text]{
     color: #606060;
     font-family: Plus Jakarta Sans;
-    font-size: 15px;
+    font-size: .9375rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 0.7rem 1rem 1rem 0.7rem;
+    padding: 1rem 1rem 1rem 0.7rem;
     width: 29.5rem;
     height: 3.5rem;
-    border-radius: 6px;
-    border: 0.8px solid #2E2E2E;
+    border-radius: .375rem;
+    border: .05rem solid #2E2E2E;
     background: rgba(217, 217, 217, 0.00);
+}
+
+.container-questions {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.container-questions p {
+    width: 38.9rem;
+    color: #313131;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.3125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container-questions h1 {
+    width: 33.8rem;
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container-questions a {
+    width: 33.8rem;
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 1.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 textarea {
     color: #606060;
     font-family: Plus Jakarta Sans;
-    font-size: 15px;
+    font-size: .9375rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding: 0.7rem 1rem 1rem 0.7rem;
     width: 29.5rem;
     height: 7rem;
-    border-radius: 6px;
-    border: 0.8px solid #2E2E2E;
+    border-radius: .375rem;
+    border: .05rem solid #2E2E2E;
     background: rgba(217, 217, 217, 0.00);
     resize: none
 }
@@ -185,6 +221,10 @@ textarea {
 .forms {
     display: flex;
     flex-direction: column;
+}
+
+.forms > button {
+    margin-top: 1.5rem;
 }
 
 #name {
@@ -198,8 +238,8 @@ textarea {
 main button {
     width: 29.5rem;
     height: 3.5rem;
-    border-radius: 6px;
-    border: 1px solid #5B2EAA;
+    border-radius: .375rem;
+    border: .0625rem solid #5B2EAA;
     background: #D5C4F2;
     color: #5B2EAA;
     text-align: center;
@@ -211,13 +251,44 @@ main button {
     margin-bottom: 3rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     #img-pc, .head-group, .show-pc {
         display: none;
     }
+
+    .container {
+        width: 100%;
+    }
+
+    .container h1 {
+        width: 33.8rem;
+        color: #000;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.8125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .container p {
+        width: 38.9rem;
+        color: #313131;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .container p span {
+        color: #313131;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     header h2, .header-subtitle, #img-mb {
         display: none;
     }
@@ -232,7 +303,7 @@ main button {
     .head {
         display: flex;
         justify-content: space-between;
-        width: 76rem;
+        width: 85rem;
         margin: 0 auto;
     }
     .head-group-subtitle1 {
@@ -295,7 +366,7 @@ main button {
         width: 33.8rem;
         color: #000;
         font-family: Plus Jakarta Sans;
-        font-size: 29px;
+        font-size: 1.8125rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -304,7 +375,7 @@ main button {
         width: 38.9rem;
         color: #313131;
         font-family: Plus Jakarta Sans;
-        font-size: 21px;
+        font-size: 1.3125rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -312,7 +383,7 @@ main button {
     .container p span {
         color: #313131;
         font-family: Plus Jakarta Sans;
-        font-size: 21px;
+        font-size: 1.3125rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -320,34 +391,34 @@ main button {
     .forms label {
         color: #131313;
         font-family: Plus Jakarta Sans;
-        font-size: 21px;
+        font-size: 1.3125rem;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
     }
     input[type=text]{
         color: #606060;
-        width: 386px;
-        height: 44px;
+        width: 24.125rem;
+        height: 2.75rem;
         font-family: Plus Jakarta Sans;
-        font-size: 19px;
+        font-size: 1.1875rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        border-radius: 6px;
-        border: 0.8px solid #2E2E2E;
+        border-radius: .375rem;
+        border: .05rem solid #2E2E2E;
         background: rgba(217, 217, 217, 0.00);
     }
 
     textarea {
-        width: 386px;
-        height: 74px;
-        border-radius: 6px;
-        border: 0.8px solid #2E2E2E;
+        width: 24.125rem;
+        height: 4.625rem;
+        border-radius: .375rem;
+        border: .05rem solid #2E2E2E;
         background: rgba(217, 217, 217, 0.00);
         color: #606060;
         font-family: Plus Jakarta Sans;
-        font-size: 19px;
+        font-size: 1.1875rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -358,15 +429,15 @@ main button {
         color: #5B2EAA;
         text-align: center;
         font-family: Plus Jakarta Sans;
-        font-size: 19px;
+        font-size: 1.1875rem;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        border-radius: 6px;
-        border: 1px solid #5B2EAA;
+        border-radius: .375rem;
+        border: .0625rem solid #5B2EAA;
         background: #D5C4F2;
-        width: 386px;
-        height: 40px;
+        width: 24.125rem;
+        height: 2.5rem;
     }
 }
 

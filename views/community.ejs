@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q/A</title>
-    <link rel="stylesheet" href="css/com-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q/A</title>
+    <link rel="stylesheet" href="css/com-style.css">
 </head>
 
 <body>
@@ -21,15 +21,29 @@
             <h1>Question, Answers / QA</h1>
             <p>uma aplicação voltada a <span>união</span> de desenvolvedores(a), e a <span>solução</span> para os seus projetos no dia-dia!
             </p>
-            <div class="forms">
-                <label for="">Nome</label>
-                <input id="name" type="text" placeholder="Como podemos te chamar?">
-                <label for="">Pergunta</label>
-                <textarea id="question" name="" id="" rows="3" placeholder="O que está com dúvida hoje?"></textarea>
-                <button>Compartilhe!</button>
-            </div>
+            <form action="/save" method="post" class="forms">
+                <label for="name">Nome</label>
+                <input id="name" type="text" placeholder="Como podemos te chamar?" name="name">
+                <label for="question">Pergunta</label>
+                <textarea id="text" name="text" rows="3" placeholder="O que está com dúvida hoje?"></textarea>
+                <button type="submit">Compartilhe!</button>
+            </form>
         </div>
     </main>
+    <div class="container-questions">
+        <% data.forEach((item) => { %>
+            <div class="">
+                <div>
+                    <h1><%= item.name %></h3>
+                </div>
+                <div>
+                    <p><%= item.question %></p>
+                </div>
+                <div>
+                    <a href="/community/<%= item.question %>">ID</a>
+                </div>
+            <% }) %>
+    </div>
     <footer></footer>
 </body>
 
