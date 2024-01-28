@@ -35,12 +35,14 @@ app.post("/save", function (req, res) {
 
 app.get("/community", function (req, res) {
   answer.findAll({ raw: true }).then(prm => {
+    console.log(prm, 'comu')
     res.render("community", { data: prm })
   })
 })
 
 app.get("/community/:id", function (req, res) {
   answer.findOne({ where: { id: req.params.id } }).then(prm => {
+    console.log(prm.dataValues, 'prm')
     res.render("question", { data: prm })
   })
 })

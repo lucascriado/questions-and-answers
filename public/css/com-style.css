@@ -303,7 +303,6 @@ main button {
     .head {
         display: flex;
         justify-content: space-between;
-        width: 85rem;
         margin: 0 auto;
     }
     .head-group-subtitle1 {
