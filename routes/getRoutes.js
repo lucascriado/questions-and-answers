@@ -12,17 +12,14 @@ router.get('/register', (req, res) => {
 });
 
 router.get('/welcome', authenticateJWT, async (req, res) => {
-    // Se o usuário estiver autenticado, renderize a página de boas-vindas
-    if (req.user) {
-    //   const usernameId = req.user.userId;
-    //   const user = await User.findOne({ where: { usernameId } });
-      
-      
-      res.render('welcome');
-    } else {
-      // Se o usuário não estiver autenticado, redirecione-o para a página de login
-      res.redirect('/login');
-    }
-  });
+  if (req.user) {
+    const id = req.user.userId;
+    const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
+    
+    res.render('welcome', { username: uniqueUser.username });
+  } else {
+    res.redirect('/login');
+  }
+});
 
 module.exports = router;

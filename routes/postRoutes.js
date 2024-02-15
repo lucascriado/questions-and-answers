@@ -24,13 +24,10 @@ router.post('/login', async (req, res) => {
   !user ? res.status(404).json({ message: 'User not found' }) : null;
   !validPassword ? res.status(401).json({ message: 'Invalid password' }) : null;
 
-  // Se o login for bem-sucedido, crie um token JWT
   const token = jwt.sign({ userId: user.id }, 'your_jwt_secret');
 
-  // Armazene o token JWT em um cookie seguro
   res.cookie('token', token, { httpOnly: true, secure: true });
 
-  // Redirecione para /welcome
   res.redirect('/welcome');
 });
 
