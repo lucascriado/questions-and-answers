@@ -22,3 +22,7 @@ User.sync({force: false});
 
 module.exports = User;
 
+// CREATE DATABASE auth;
+// CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Password1!';
+// GRANT ALL ON auth.* TO 'admin'@'localhost';
+// FLUSH PRIVILEGES;
