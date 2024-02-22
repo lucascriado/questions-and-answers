@@ -2,7 +2,8 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const router = express.Router();
 const { authenticateJWT, jwt } = require('../auth/authToken');
-const User = require('../db/connectionData');
+const User = require('../db/tables/usersTable');
+const Post = require('../db/tables/postTable');
 
 router.post('/register', async (req, res) => {
     const { username, password } = req.body;
@@ -29,6 +30,18 @@ router.post('/login', async (req, res) => {
   res.cookie('token', token, { httpOnly: true, secure: true });
 
   res.redirect('/welcome');
+});
+
+router.post('/registerPost', authenticateJWT, async (req, res) => {
+    const { usernome, avatar, content } = req.body;
+    const userId = req.user.userId;
+
+    try {
+        await Post.create({ usernome, userId, avatar, content });
+        res.status(201).json({ message: 'Post created' });
+    } catch (error) {
+        res.status(500).json({ message: 'Error creating post', error });
+    }
 });
 
 module.exports = router;

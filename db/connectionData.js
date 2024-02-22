@@ -6,21 +6,7 @@ const sequelize = new Sequelize('auth', 'admin', 'Password1!', {
     port: 3306
 });
 
-const User = sequelize.define('user', {
-    username: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true
-    },
-    password: {
-        type: Sequelize.STRING,
-        allowNull: false
-    }
-});
-
-User.sync({force: false});
-
-module.exports = User;
+module.exports = { Sequelize, sequelize };
 
 // CREATE DATABASE auth;
 // CREATE USER 'admin'@'localhost' IDENTIFIED BY 'Password1!';
