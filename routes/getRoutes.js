@@ -33,6 +33,7 @@ router.get('/welcome', authenticateJWT, async (req, res) => {
     const myPosts = await Post.findAll({ where: { userId: id }, raw: true });
     console.log(myPosts, 'myPosts', id, 'id')
     const posts = await Post.findAll({ raw: true });
+    console.log(posts, 'postskshaskdjashdkjas')
     
     res.render('welcome', { username: uniqueUser.username, posts: posts, myPosts: myPosts});
   } else {

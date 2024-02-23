@@ -21,20 +21,17 @@
         <hr>
         <% }); %>
 
-            <h3>Todos os posts:</h3>
-            <% posts.forEach(function(post) { %>
-                <p>ID: <%= post.id %>
-                </p>
-                <p>Username: <%= post.username %>
-                </p>
-                <p>Content: <%= post.content %>
-                </p>
-                <p>Created At: <%= post.createdAt %>
-                </p>
-                <p>Updated At: <%= post.updatedAt %>
-                </p>
-                <hr>
-                <% }); %>
+        <h3>Todos os posts:</h3>
+        <% posts.forEach(function(post) { %>
+        <p>ID do usuário que criou: <%= post.userId %>
+        </p>
+        <p>Usernome: <%= post.usernome %>
+        </p>
+        <p>Content: <%= post.content %>
+        </p>
+        <img src="https://github.com/<%= post.avatar %>.png" alt="">
+        <hr>
+        <% }); %>
 </body>
 
 </html>
