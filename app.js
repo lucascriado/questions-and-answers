@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const getRoutes = require('./routes/getRoutes');
 const postRoutes = require('./routes/postRoutes');
+const deleteRoutes = require('./routes/deleteRoutes');  
 const cookieParser = require('cookie-parser');
 
 app.set('view engine', 'ejs');
@@ -15,5 +16,6 @@ app.use(cookieParser());
 
 app.use('/', getRoutes);
 app.use('/', postRoutes);
+app.use('/', deleteRoutes);
 
 app.listen(9090);

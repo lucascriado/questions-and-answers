@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Post</title>
+</head>
+<body>
+    <h3>Edit Post:</h3>
+    <form action="/editPost/<%= post.id %>" method="POST">
+        <label for="usernome">Username:</label><br>
+        <input type="text" id="usernome" name="usernome" value="<%= post.usernome %>"><br>
+        <label for="avatar">Avatar:</label><br>
+        <input type="text" id="avatar" name="avatar" value="<%= post.avatar %>"><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content"><%= post.content %></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

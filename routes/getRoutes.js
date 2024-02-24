@@ -31,7 +31,6 @@ router.get('/welcome', authenticateJWT, async (req, res) => {
     const id = req.user.userId;
     const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
     const myPosts = await Post.findAll({ where: { userId: id }, raw: true });
-    console.log(myPosts, 'myPosts', id, 'id')
     const posts = await Post.findAll({ raw: true });
     console.log(posts, 'postskshaskdjashdkjas')
     
@@ -39,6 +38,16 @@ router.get('/welcome', authenticateJWT, async (req, res) => {
   } else {
     res.redirect('/login');
   }
+});
+
+router.get('/editPost/:id', authenticateJWT, async (req, res) => {
+  const id = req.params.id;
+  const userId = req.user.userId;
+  const post = await Post.findOne({ where: { id: id, userId: userId }, raw: true });
+  if (!post) {
+      return res.status(404).json({ message: 'Post not found' });
+  }
+  res.render('editPost', { post: post });
 });
 
 module.exports = router;

@@ -16,9 +16,10 @@
         </p>
         <p>Created At: <%= post.createdAt %>
         </p>
-        <p>Updated At: <%= post.updatedAt %>
-        </p>
-        <hr>
+        <p>Updated At: <%= post.updatedAt %></p>
+        <a href="/editPost/<%= post.id %>">Edit</a>
+        <p>Updated At: <%= post.updatedAt %></p>
+        <button onclick="deletePost('<%= post.id %>')">Delete</button>
         <% }); %>
 
         <h3>Todos os posts:</h3>
@@ -32,6 +33,22 @@
         <img src="https://github.com/<%= post.avatar %>.png" alt="">
         <hr>
         <% }); %>
+
+        <script>
+            function deletePost(id) {
+                if (confirm('Are you sure?')) {
+                    fetch('/deletePost/' + id, { method: 'DELETE' })
+                    .then(res => {
+                        console.log(res, 'res');
+                        if (res) {
+                            window.location.reload();
+                        } else {
+                            alert('Error deleting post');
+                        }
+                    });
+                }
+            }
+        </script>
 </body>
 
 </html>

@@ -44,6 +44,22 @@ router.post('/registerPost', authenticateJWT, async (req, res) => {
     }
 });
 
+router.post('/editPost/:id', authenticateJWT, async (req, res) => {
+    const id = req.params.id;
+    const userId = req.user.userId;
+    const { usernome, avatar, content } = req.body;
+    try {
+        const post = await Post.findOne({ where: { id: id, userId: userId } });
+        if (!post) {
+            return res.status(404).json({ message: 'Post not found' });
+        }
+        await post.update({ usernome, avatar, content });
+        res.redirect('/welcome');
+    } catch (error) {
+        res.status(500).json({ message: 'Error updating post', error });
+    }
+});
+
 module.exports = router;
 
 
