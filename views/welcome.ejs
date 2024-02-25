@@ -1,54 +1,51 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/welcome-views.css">
+    <title>Q/A</title>
 </head>
-
 <body>
-    <h3>Meus posts:</h3>
-    <% myPosts.forEach(function(post) { %>
-        <p>ID: <%= post.id %>
-        </p>
-        <p>Username: <%= post.username %>
-        </p>
-        <p>Content: <%= post.content %>
-        </p>
-        <p>Created At: <%= post.createdAt %>
-        </p>
-        <p>Updated At: <%= post.updatedAt %></p>
-        <a href="/editPost/<%= post.id %>">Edit</a>
-        <p>Updated At: <%= post.updatedAt %></p>
-        <button onclick="deletePost('<%= post.id %>')">Delete</button>
-        <% }); %>
-
+    <div class="welcome">
+        <h1>Meus posts:</h1>
+        <% myPosts.forEach(function(post) { %>
+            <p>ID: <%= post.id %></p>
+            <p>Usernome: <%= post.usernome %></p>
+            <p>Content: <%= post.content %></p>
+            <p>createdAt: <%= post.createdAt %></p>
+            <p>updatedAt: <%= post.updatedAt %></p>
+            <button><a href="/editPost/<%= post.id %>">Edit</a></button>
+            <button onclick="deletePost('<%= post.id %>')">Delete</button>
+        <% }); %>  
+    
         <h3>Todos os posts:</h3>
         <% posts.forEach(function(post) { %>
-        <p>ID do usuário que criou: <%= post.userId %>
-        </p>
-        <p>Usernome: <%= post.usernome %>
-        </p>
-        <p>Content: <%= post.content %>
-        </p>
-        <img src="https://github.com/<%= post.avatar %>.png" alt="">
-        <hr>
+            <p>ID do usuário que criou: <%= post.userId %>
+            </p>
+            <p>Usernome: <%= post.usernome %>
+            </p>
+            <p>Content: <%= post.content %>
+            </p>
+            <img class="avatar" src="https://github.com/<%= post.avatar %>.png" alt="">
+            <hr>
         <% }); %>
-
-        <script>
-            function deletePost(id) {
-                if (confirm('Are you sure?')) {
-                    fetch('/deletePost/' + id, { method: 'DELETE' })
-                    .then(res => {
-                        console.log(res, 'res');
-                        if (res) {
-                            window.location.reload();
-                        } else {
-                            alert('Error deleting post');
-                        }
-                    });
-                }
+    </div>
+    
+    
+    <script>
+        function deletePost(id) {
+            if (id) {
+                fetch('/deletePost/' + id, { method: 'DELETE' })
+                .then(res => {
+                    if (res) {
+                        window.location.reload();
+                    } else {
+                        alert('Error deleting post');
+                    }
+                });
             }
-        </script>
+        }
+    </script>
 </body>
-
 </html>
