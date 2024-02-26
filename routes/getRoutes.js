@@ -30,12 +30,12 @@ router.get('/welcome', authenticateJWT, async (req, res) => {
   if (req.user) {
     const id = req.user.userId;
     const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
+    const avatar = uniqueUser.avatar;
     const myPosts = await Post.findAll({ where: { userId: id }, raw: true });
     const posts = await Post.findAll({ raw: true });
     const comments = await Comment.findAll({ limit: 3, raw: true });
-    console.log(posts, 'postskshaskdjashdkjas')
-    
-    res.render('welcome', { username: uniqueUser.username, posts: posts, myPosts: myPosts, comments: comments });
+    console.log(id, 'id', uniqueUser, 'avatar')
+    res.render('welcome', { username: uniqueUser.username, posts: posts, myPosts: myPosts, comments: comments, id: id, avatar: avatar });
   } else {
     res.redirect('/login');
   }

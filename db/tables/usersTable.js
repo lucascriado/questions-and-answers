@@ -6,6 +6,10 @@ const User = sequelize.define('user', {
         allowNull: false,
         unique: true
     },
+    avatar: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     password: {
         type: Sequelize.STRING,
         allowNull: false

@@ -6,16 +6,7 @@ const Comment = sequelize.define('comment', {
         primaryKey: true,
         autoIncrement: true
     },
-    username: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true
-    },
     postId: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    avatar: {
         type: Sequelize.STRING,
         allowNull: false
     },
