@@ -15,14 +15,12 @@ router.get('/register', (req, res) => {
 
 router.get('/postzao', authenticateJWT, async (req, res) => {
   const id = req.user.userId;
-  console.log(id, 'id')
   const postzao = await Post.findAll({ raw: true });
   res.render('create', { postzao: postzao });
 })
 
 router.get('/comment', async (req, res)=>{
   const comments = await Comment.findAll({ raw: true });
-  console.log(id, 'comments')
   res.render('comment')
 })
 
@@ -30,12 +28,11 @@ router.get('/welcome', authenticateJWT, async (req, res) => {
   if (req.user) {
     const id = req.user.userId;
     const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
-    const avatar = uniqueUser.avatar;
     const myPosts = await Post.findAll({ where: { userId: id }, raw: true });
     const posts = await Post.findAll({ raw: true });
     const comments = await Comment.findAll({ limit: 3, raw: true });
-    console.log(id, 'id', uniqueUser, 'avatar')
-    res.render('welcome', { username: uniqueUser.username, posts: posts, myPosts: myPosts, comments: comments, id: id, avatar: avatar });
+    console.log(posts, 'posts')
+    res.render('welcome', { username: uniqueUser.username, posts: posts, myPosts: myPosts, comments: comments, id: id });
   } else {
     res.redirect('/login');
   }

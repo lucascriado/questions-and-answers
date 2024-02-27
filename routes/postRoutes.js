@@ -35,8 +35,9 @@ router.post('/login', async (req, res) => {
 router.post('/registerPost', authenticateJWT, async (req, res) => {
     const { content } = req.body;
     const userId = req.user.userId;
-    const avatar = req.user.avatar;
-
+    const id = req.user.userId;
+    const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
+    const avatar = uniqueUser.avatar;
     try {
         await Post.create({ userId, avatar, content });
         res.status(201).json({ message: 'Post created' });

@@ -21,3 +21,11 @@ body {
     height: 100px;
     border-radius: 50%;
 }
+
+.hidden {
+    display: none;
+}
+
+#editButton::after + #editForm {
+    display: block;
+}

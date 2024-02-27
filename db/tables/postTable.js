@@ -5,6 +5,10 @@ const Post = sequelize.define('post', {
         type: Sequelize.STRING,
         allowNull: false
     },
+    avatar: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     content: {
         type: Sequelize.STRING,
         allowNull: false
