@@ -2,15 +2,14 @@ const { sequelize, Sequelize } = require('../connectionData');
 
 const Comment = sequelize.define('comment', {
     userId: {
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
+        type: Sequelize.STRING,
+        allowNull: false
     },
     postId: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    content: {
+    comment: {
         type: Sequelize.STRING,
         allowNull: false
     }

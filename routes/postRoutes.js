@@ -4,6 +4,7 @@ const router = express.Router();
 const { authenticateJWT, jwt } = require('../auth/authToken');
 const User = require('../db/tables/usersTable');
 const Post = require('../db/tables/postTable');
+const Comment = require('../db/tables/commentTable');
 
 router.post('/register', async (req, res) => {
     const { username, password, avatar } = req.body;
@@ -63,6 +64,19 @@ router.post('/editPost/:id', authenticateJWT, async (req, res) => {
         res.status(500).json({ message: 'Error updating post', error });
     }
 });
+
+router.post('/registerComment/:id', authenticateJWT, async (req, res) => {
+    const id = req.params.id;
+    const userId = req.user.userId;
+    const { comment } = req.body;
+    try {
+        await Comment.create({ userId, postId: id, comment });
+        res.status(201).json({ message: 'Comment created' });
+    } catch (error) {
+        console.log(error, 'error')
+        res.status(500).json({ message: 'Error creating comment', error });
+    }
+})
 
 module.exports = router;
 

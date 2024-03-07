@@ -21,4 +21,20 @@ router.put('/editPost/:id', authenticateJWT, async (req, res) => {
     }
 });
 
+router.put('/editComment/:id', authenticateJWT, async (req, res) => {
+    const id = req.params.id;
+    const userId = req.user.userId;
+    const { comment } = req.body;
+    try {
+        const hasComment = await Comment.findOne({ where: { id: id, userId: userId } });
+        if (!hasComment) {
+            return res.status(404).json({ message: 'Comment not found' });
+        }
+        await comment.update({ comment });
+        res.redirect('/welcome');
+    } catch (error) {
+        res.status(500).json({ message: 'Error updating comment', error });
+    }
+});
+
 module.exports = router;

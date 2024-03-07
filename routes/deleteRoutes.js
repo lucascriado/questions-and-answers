@@ -20,4 +20,19 @@ router.delete('/deletePost/:id', authenticateJWT, async (req, res) => {
     }
 });
 
+router.delete('/deleteComment/:id', authenticateJWT, async (req, res) => {
+    const id = req.params.id;
+    const userId = req.user.userId;
+    try {
+        const comment = await Comment.findOne({ where: { id: id, userId: userId } });
+        if (!comment) {
+            return res.status(404).json({ message: 'Comment not found' });
+        }
+        await comment.destroy();
+        res.redirect('/welcome');
+    } catch (error) {
+        res.status(500).json({ message: 'Error deleting comment', error });
+    }
+});
+
 module.exports = router;
