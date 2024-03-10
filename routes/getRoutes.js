@@ -47,4 +47,8 @@ router.get('/editPost/:id', authenticateJWT, async (req, res) => {
   res.render('editPost', { post: post });
 });
 
+router.get('/plogin', (req, res) => {
+  res.render('plogin');
+});
+
 module.exports = router;
