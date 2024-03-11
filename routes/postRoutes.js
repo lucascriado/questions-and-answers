@@ -34,13 +34,13 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/registerPost', authenticateJWT, async (req, res) => {
-    const { content } = req.body;
+    const { content, title } = req.body;
     const userId = req.user.userId;
     const id = req.user.userId;
     const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
     const avatar = uniqueUser.avatar;
     try {
-        await Post.create({ userId, avatar, content });
+        await Post.create({ userId, avatar, title, content });
         res.status(201).json({ message: 'Post created' });
     } catch (error) {
         res.status(500).json({ message: 'Error creating post', error });

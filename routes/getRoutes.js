@@ -47,8 +47,18 @@ router.get('/editPost/:id', authenticateJWT, async (req, res) => {
   res.render('editPost', { post: post });
 });
 
-router.get('/plogin', (req, res) => {
-  res.render('plogin');
-});
+// new routes
+
+router.get('/newRegister', (req, res) => {
+  res.render('newRegister');
+})
+
+router.get('/newLogin', (req, res) => {
+  res.render('newLogin');
+})
+
+router.get('/newWelcome', (req, res) => {
+  res.render('newWelcome');
+})
 
 module.exports = router;
