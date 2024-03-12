@@ -106,7 +106,7 @@
           <img class="h-6 w-6" src="https://github.com/<%= post.avatar %>.png" alt="image">
         </span>
 
-        <div>
+        <div id="formMock" style="display: block;">
           <h3 id="postTitle<%= post.id %>" class="mt-0.5 text-lg font-medium text-gray-900">
             <%= post.title %>
           </h3>
@@ -114,6 +114,19 @@
           <p id="postContent<%= post.id %>" class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
             <%= post.content %>
           </p>  
+        </div>
+
+        <div id="formInput" style="display: none;">
+          <form  action="/editPost/<%= post.id %>" method="post" >
+            <input id="postTitle<%= post.id %>" class="mt-0.5 text-lg font-medium text-gray-900">
+              <%= post.title %>
+            </input>
+          
+            <input id="postContent<%= post.id %>" class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500" id="content" name="content">
+              <%= post.content %>
+            </input>
+            <button type="submit">Ok</button>  
+          </form>
         </div>
         
         <div class="flex justify-between">
@@ -199,14 +212,17 @@
 
     document.addEventListener('DOMContentLoaded', (event) => {
     const editButton = document.getElementById('editButton');
-    const editForm = document.getElementById('editForm');
+    const formInput = document.getElementById('formInput');
+    const formMock = document.getElementById('formMock');
 
     editButton.addEventListener('click', (event) => {
         event.preventDefault();
-        if (editForm.style.display === 'none') {
-            editForm.style.display = 'block';
+        if (formMock.style.display === 'block') {
+            formInput.style.display = 'block';
+            formMock.style.display = 'none';
         } else {
-            editForm.style.display = 'none';
+            formInput.style.display = 'none';
+            formMock.style.display = 'block';
         }
     });
     });
