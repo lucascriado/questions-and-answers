@@ -66,17 +66,18 @@ router.post('/editPost/:id', authenticateJWT, async (req, res) => {
 });
 
 router.post('/registerComment/:id', authenticateJWT, async (req, res) => {
-    const id = req.params.id;
+    const postId = req.params.id; 
     const userId = req.user.userId;
     const { comment } = req.body;
     try {
-        await Comment.create({ userId, postId: id, comment });
+        await Comment.create({ userId, postId, comment });  
         res.status(201).json({ message: 'Comment created' });
     } catch (error) {
-        console.log(error, 'error')
+        console.log(error, 'error');
         res.status(500).json({ message: 'Error creating comment', error });
     }
-})
+});
+
 
 module.exports = router;
 

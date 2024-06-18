@@ -25,17 +25,17 @@ router.get('/comment', async (req, res)=>{
 })
 
 router.get('/welcome', authenticateJWT, async (req, res) => {
-  if (req.user) {
-    const id = req.user.userId;
-    const uniqueUser = await User.findOne({ where: { id: id }, raw: true });
-    const myPosts = await Post.findAll({ where: { userId: id }, raw: true });
-    const posts = await Post.findAll({ raw: true });
-    const comments = await Comment.findAll({ limit: 3, raw: true });
-    res.render('welcome', { username: uniqueUser.username, posts: posts, myPosts: myPosts, comments: comments, id: id });
-  } else {
-    res.redirect('/login');
+  try {
+      const posts = await Post.findAll();
+      const comments = await Comment.findAll();
+      const id = req.user.userId; // Id do usuário autenticado
+      res.render('welcome', { posts, comments, id }); // Passando os dados para a view
+  } catch (error) {
+      res.status(500).json({ message: 'Error loading posts or comments', error });
   }
 });
+
+
 
 router.get('/editPost/:id', authenticateJWT, async (req, res) => {
   const id = req.params.id;
